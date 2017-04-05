@@ -3,6 +3,7 @@ var message;
 var url = document.URL;
 var user = url.substring(url.lastIndexOf('=') + 1);
 user = user.replace(/\W/g, '')
+
 function getMessage() {
     message = {
         username: user,
@@ -84,6 +85,7 @@ function myFunction() {
 //     }
 // }
 var room;
+
 function promptRoom() {
     room = prompt("Enter room name:");
     app.renderRoom(room);
@@ -91,6 +93,7 @@ function promptRoom() {
 console.log(app);
 
 var lobby;
+
 function lobbyCheck() {
     lobby = $('select').val();
     if (lobby === undefined) {
@@ -99,8 +102,9 @@ function lobbyCheck() {
     return lobby;
 }
 lobbyCheck();
+
 function updater() {
-    app.clearMessages();
+  app.clearMessages();
     $.ajax({
         // This is the url you should use to communicate with the parse API server.
         url: 'http://parse.sfs.hackreactor.com/chatterbox/classes/messages',
@@ -112,9 +116,8 @@ function updater() {
             var dataMess = data.results;
             for (var i = 0; i < 100; i++) {
                 app.renderRoom(dataMess[i].roomname);
-                if (dataMess[i].text && dataMess[i].text.includes("<script>")) {
-                } else {
-                    if(dataMess[i].roomname ===undefined){
+                if (dataMess[i].text && dataMess[i].text.includes("<script>")) {} else {
+                    if (dataMess[i].roomname === undefined) {
                         dataMess[i].roomname = "lobby";
                     }
                     if (dataMess[i].roomname === lobby) {
@@ -123,11 +126,9 @@ function updater() {
                 }
             }
         },
-        error: function (data) {
+      error: function (data) {
             // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
-            console.error('chatterbox: Failed to send message', data);
-        }
+        console.error('chatterbox: Failed to send message', data);
+      }
     });
 }
-
-
