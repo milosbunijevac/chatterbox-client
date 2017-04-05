@@ -1,5 +1,5 @@
 body {
-    background: #eee;
+    background-image: url('http://www.designbolts.com/wp-content/uploads/2013/02/Rough-Grey-Seamless-Pattern-For-Website-Background.jpg');
     text-align: center;
     padding: 0 25px;
     font-family: arial, sans-serif;
@@ -8,11 +8,11 @@ body {
 #main, #chats {
     width: 500px;
     margin: auto;
+    background-image: url('http://www.designbolts.com/wp-content/uploads/2013/02/Rough-Grey-Seamless-Pattern-For-Website-Background.jpg')
     text-align: left;
-    background: white;
     padding: 50px 60px;
     border: solid #ddd;
-    border-width: 0 1px 1px 1px;
+    border-width: 5px 5px 5px 5px;
 }
 
 #main h1 {
@@ -88,3 +88,96 @@ form input[type=text] {
     background-color: #0090da;
 }
 
+.dropbtn {
+    background:#223445;
+    color:#FFFFFF ;
+    border: 1px solid #223445;
+    -moz-border-radius: 18px; 
+    -moz-border-radius: 5px; 
+    display:inline-block;
+    width: 8em;
+    height: 2em;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 5px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: darkslategrey;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+input[type="submit"] {
+    background:#223445;
+    color:#FFFFFF ;
+    border: 1px solid #223445;
+    -moz-border-radius: 18px; 
+    -moz-border-radius: 5px; 
+    display:inline-block;
+    width: 8em;
+    height: 2em;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 5px;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: darkslategrey;
+}
+.lobbybtn  {
+    background:#223445;
+    color:#FFFFFF ;
+    border: 1px solid #223445;
+    -moz-border-radius: 18px; 
+    -moz-border-radius: 5px; 
+    display:inline-block;
+    width: 8em;
+    height: 2em;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 5px;
+}
+.refreshbtn  {
+    background:#223445;
+    color:#FFFFFF ;
+    border: 1px solid #223445;
+    -moz-border-radius: 18px; 
+    -moz-border-radius: 5px; 
+    display:inline-block;
+    width: 20em;
+    height: 2em;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 5px;
+}
